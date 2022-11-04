@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { createContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
@@ -23,8 +24,21 @@ const ContextProvider = ({ children }) => {
     getPhotos()
   }, [])
 
+  function toggleFavorite (photoID) {
+    const updatedPhotos = photos.map(photo => {
+      if (photo.id === photoID) {
+        return {
+          ...photo,
+          isFavorite: !photo.isFavorite
+        }
+      }
+      return photo
+    })
+    setPhotos(updatedPhotos)
+  }
+
   return (
-        <Context.Provider value={photos}>
+        <Context.Provider value={{ photos, toggleFavorite }}>
             {children}
         </Context.Provider>
   )

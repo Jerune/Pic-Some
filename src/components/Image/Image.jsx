@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-function Image ({ className, img }) {
+function Image ({ className, img, toggle }) {
   const [hovered, setHovered] = useState(false)
-  const heartIcon = hovered && <i className="ri-heart-line favorite"></i>
+  const heartIcon = hovered && <i className="ri-heart-line favorite" onClick={() => toggle(img.id)}></i>
   const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>
 
   return (
@@ -17,7 +17,8 @@ function Image ({ className, img }) {
 
 Image.propTypes = {
   className: PropTypes.string,
-  img: PropTypes.object.isRequired
+  img: PropTypes.object.isRequired,
+  toggle: PropTypes.func
 }
 
 export default Image
