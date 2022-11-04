@@ -12,8 +12,6 @@ function Photos () {
     <Image key={photo.id} img={photo} className={getClass(index)}/>
   ))
 
-  console.log(photoElements)
-
   return (
         <main className="photos">
             {photoElements}

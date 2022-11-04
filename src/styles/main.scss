@@ -2,9 +2,10 @@
 @import "../utils/general.scss";
 @import "../utils/variables.scss";
 
-// Components
-@import "../components/Header/Header.scss";
-
 // Pages
 @import "../pages/Cart/Cart.scss";
 @import "../pages/Photos/Photos.scss";
+
+// Components
+@import "../components/Header/Header.scss";
+@import "../components/Image/Image.scss";
