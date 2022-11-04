@@ -1,15 +1,15 @@
-import React from "react"
-import { Routes, Route } from "react-router-dom"
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 // Components
-import Header from "./components/Header/Header"
+import Header from './components/Header/Header'
 
 // Pages
-import Cart from "./pages/Cart/Cart"
-import Photos from "./pages/Photos/Photos"
+import Cart from './pages/Cart/Cart'
+import Photos from './pages/Photos/Photos'
 
-function App() {    
-    return (
+function App () {
+  return (
         <>
           <Header />
           <main>
@@ -19,7 +19,7 @@ function App() {
             </Routes>
           </main>
         </>
-    )
+  )
 }
 
 export default App
