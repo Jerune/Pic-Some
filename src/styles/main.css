@@ -4,11 +4,17 @@
 
 :root {
   font-size: 16px;
+  --black: #150605;
+  --red: #EA453C;
+  --pink: #F47B6E;
+  --light-blue: #EFFBFE;
+  --blue: #ACE6EC;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+html, body {
+  font-family: "Oswald", sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -16,9 +22,16 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, p {
-  margin: 0;
-  font-weight: 500;
+a:visited {
+  color: var(--light-blue);
+}
+
+a:hover {
+  color: var(--light-blue);
+}
+
+a:active {
+  color: var(--light-blue);
 }
 
 ul {
