@@ -38,8 +38,9 @@ const ContextProvider = ({ children }) => {
     setPhotos(updatedPhotos)
   }
 
-  function addItemToCart (newItem) {
-    setCartItems(prevState => [...prevState, newItem])
+  async function addItemToCart (newItem) {
+    await setCartItems(prevState => [...prevState, newItem])
+    console.log(cartItems)
   }
 
   return (
