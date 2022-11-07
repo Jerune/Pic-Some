@@ -31,18 +31,6 @@ div.order-button > button:disabled {
     border-color: lightgray;
 }
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.cart-item img {
-    margin-right: auto;
-    margin-left: 10px;   
-}
-
 .ri-delete-bin-line, .ri-delete-bin-fill {
     font-size: 1.3em;
     cursor: pointer;
