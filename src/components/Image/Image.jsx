@@ -5,7 +5,12 @@ import { Context } from '../../Context'
 
 function Image ({ className, img }) {
   const [hovered, setHovered] = useState(false)
-  const { cartItems, toggleFavorite, addItemsToCart } = useContext(Context)
+  const {
+    cartItems,
+    toggleFavorite,
+    addItemToCart,
+    removeItemFromCart
+  } = useContext(Context)
 
   function heartIcon () {
     if (img.isFavorite) {
@@ -18,9 +23,9 @@ function Image ({ className, img }) {
   function cartIcon () {
     const isInCart = cartItems.some(item => item.id === img.id)
     if (isInCart) {
-      return <i className="ri-shopping-cart-fill cart"></i>
+      return <i className="ri-shopping-cart-fill cart" onClick={() => removeItemFromCart(img)}></i>
     } else if (!isInCart && hovered) {
-      return <i className="ri-add-circle-line cart" onClick={() => addItemsToCart(img)}></i>
+      return <i className="ri-add-circle-line cart" onClick={() => addItemToCart(img)}></i>
     }
   }
 

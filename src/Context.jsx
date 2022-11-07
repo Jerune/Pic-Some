@@ -38,13 +38,24 @@ const ContextProvider = ({ children }) => {
     setPhotos(updatedPhotos)
   }
 
-  async function addItemToCart (newItem) {
-    await setCartItems(prevState => [...prevState, newItem])
-    console.log(cartItems)
+  function addItemToCart (selectedItem) {
+    setCartItems(prevState => [...prevState, selectedItem])
+  }
+
+  function removeItemFromCart (selectedItem) {
+    const updatedArray = cartItems.filter(item => item.id !== selectedItem.id)
+    setCartItems(updatedArray)
   }
 
   return (
-        <Context.Provider value={{ photos, cartItems, toggleFavorite, addItemToCart }}>
+        <Context.Provider value={{
+          photos,
+          cartItems,
+          toggleFavorite,
+          addItemToCart,
+          removeItemFromCart
+        }}
+            >
             {children}
         </Context.Provider>
   )
