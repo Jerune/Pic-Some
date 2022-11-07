@@ -51,6 +51,7 @@ const ContextProvider = ({ children }) => {
         <Context.Provider value={{
           photos,
           cartItems,
+          setCartItems,
           toggleFavorite,
           addItemToCart,
           removeItemFromCart
