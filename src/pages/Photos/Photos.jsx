@@ -7,9 +7,9 @@ import { getClass } from '../../utils/index'
 import Image from '../../components/Image/Image'
 
 function Photos () {
-  const { photos, toggleFavorite } = useContext(Context)
+  const { photos, toggleFavorite, addItemToCart } = useContext(Context)
   const photoElements = photos.map((photo, index) => (
-    <Image key={photo.id} img={photo} className={getClass(index)} toggle={toggleFavorite}/>
+    <Image key={photo.id} img={photo} className={getClass(index)} favorite={toggleFavorite} add={addItemToCart}/>
   ))
 
   return (
