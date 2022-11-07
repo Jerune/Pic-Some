@@ -4,7 +4,7 @@ import { Context } from '../../Context'
 import PropTypes from 'prop-types'
 
 function CartItem ({ item }) {
-  const { addItemToCart, removeItemFromCart } = useContext(Context)
+  const { removeItemFromCart } = useContext(Context)
 
   return (
         <div className="cart-item">
